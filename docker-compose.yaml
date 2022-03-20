@@ -18,6 +18,4 @@ services:
       - NODE_ENV=development
       - PORT=3000
     command:
-      sh -c 'npm i && node server.js'
-
-      # docker-compose -f docker-compose.yaml up -d
+      sh -c 'node server.js'

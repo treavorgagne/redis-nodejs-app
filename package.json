@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "axios": "^0.26.1",
+    "express": "^4.17.3",
+    "redis": "^4.0.4",
+    "tedis": "^0.1.12",
+    "util": "^0.12.4"
+  }
+}
