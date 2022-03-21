@@ -1,0 +1,28 @@
+<html>
+<head>
+  <title>Orders</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <div style="margin:100px;">
+    <div class="jumbotron"  style="padding:40px;">
+      <h2>Admin Page</h2>
+      <p>
+          Orders place from oldest to newests.
+      </p>
+      <hr>
+      <p>
+        ${orders.map(orders => `
+            <p>Order place on <b>${orders.orderdate}</b></p>
+            <p><b>Username:</b> ${orders.username}</p>
+            <p><b>Book ordered:</b> ${orders.bookname}</p>
+            <p><b>Author of book ordered:</b> ${orders.author}</p>
+          `).join('<hr>')}
+      </p>
+    </div>
+  </div>
+</body>
+</html>

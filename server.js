@@ -2,14 +2,22 @@ const express = require('express');
 const app = express();
 const redis = require('redis');
 const bodyParser = require("body-parser");
-const _dirname = "./"
+const _dirname = "./";
 const client = redis.createClient(process.env.REDIS_URL);
+const es6Renderer = require('express-es6-template-engine');
 
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.urlencoded({extended: true}));
+app.engine('html', es6Renderer);
+app.set('views', 'views');
+app.set('view engine', 'html');
 
 app.get('/admin', async (req, res) => {
   client.lrange("order", 0, -1, function(err, reply) {
-    return res.send(reply);
+    var orders = reply;
+    for(var i = 0; i < orders.length; i++){
+      orders[i] = JSON.parse(orders[i])
+    }
+    return res.render('admin', {locals: {orders: orders}})
   });
 });
 
