@@ -1,4 +1,4 @@
-# Express Redis Docker app
+# Express Redis Docker app to order books
 
 Requirements: [Docker Community Edition](https://www.docker.com/community-edition)
 
