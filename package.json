@@ -1,12 +1,17 @@
 {
+  "name": "express-redis",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
   "scripts": {
     "start": "node server.js"
   },
+  "keywords": [],
+  "author": "Hugo Di Francesco",
+  "license": "MIT",
   "dependencies": {
-    "axios": "^0.26.1",
-    "express": "^4.17.3",
-    "redis": "^4.0.4",
-    "tedis": "^0.1.12",
-    "util": "^0.12.4"
+    "body-parser": "^1.19.2",
+    "express": "^4.16.3",
+    "redis": "^3.0.2"
   }
 }

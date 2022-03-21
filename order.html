@@ -1,0 +1,31 @@
+<html>
+<head>
+  <title>Orders</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <div style="margin:100px;">
+    <div class="jumbotron"  style="padding:40px;">
+      <h2>Place Order</h2>
+      <p>Place your book order. We know where you live and your credit card info. Also, We will charge you don't worry. 
+          Don't worry about the how much the book is too.
+      </p>
+      <form action="/order" method="POST">
+        <fieldset>
+            <label for="bookname">Book Name:</label>
+            <input type="text" id="bookname" name="bookname"><br><br>
+            <label for="authorname">Author Name:</label>
+            <input type="text" id="authorname" name="authorname"><br><br>
+            <label for="username">User Name:</label>
+            <input type="text" id="username" name="username"><br><br>
+            <br>
+            <input type="submit" value="Order">
+        </fieldset>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
