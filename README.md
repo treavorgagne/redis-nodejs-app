@@ -4,4 +4,4 @@ Requirements: [Docker Community Edition](https://www.docker.com/community-editio
 
 To start the app run: `docker-compose up`.
 
-Afterwhich the application should be running at localhost:3000 in your browser. 
+Afterwhich the application should be running at localhost:3000(http://localhost:3000) in your browser. 
