@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const redis = require('redis');
 const bodyParser = require("body-parser");
-const _dirname = "./";
+const _dirname = "./views";
 const client = redis.createClient(process.env.REDIS_URL);
 const es6Renderer = require('express-es6-template-engine');
 
